@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HQL Services Liberia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="HQL Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurant.html">Restaurant</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="rating.html">Rate Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get in Touch with Us</h1>
+            <p>We’re here to assist you with all your inquiries and bookings.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Contact Details -->
+    <section class="contact-details">
+        <h2>Our Contact Details</h2>
+        <div class="details">
+            <div class="detail">
+                <h3>Address</h3>
+                <p>123 HQL Street, Monrovia, Liberia</p>
+            </div>
+            <div class="detail">
+                <h3>Phone</h3>
+                <p>+231 123 456 789</p>
+            </div>
+            <div class="detail">
+                <h3>Email</h3>
+                <p>info@hqlservicesliberia.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="map">
+        <h2>Find Us Here</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1841685614518!2d-10.358985900000002!3d6.2394412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfa0b3f4d4547a4f%3A0xd9175e3bb2b8c274!2sRoberts%20International%20Airport%20(ROB)!5e0!3m2!1sen!2s!4v1735471422225!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"
+            <width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HQL Services Liberia. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

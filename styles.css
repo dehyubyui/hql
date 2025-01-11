@@ -1,0 +1,814 @@
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    color: #007BFF;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Mobile navigation */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar[aria-expanded="true"] .nav-links {
+        display: flex;
+    }
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e7f3ff;
+}
+
+/* Map Section */
+.map {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5faff;
+}
+
+.map iframe {
+    border: none;
+    margin-top: 1rem;
+}
+/* Logo Size */
+.navbar .logo {
+    width: 100px;  /* Adjust this value to make the logo fit */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 40vh; /* Reduced height */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 40vh; /* Reduced height */
+    background-size: cover;
+    background-position: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* General Styles for Text */
+h1, h2, h3, p {
+    font-family: 'Arial', sans-serif;
+    color: black; /* Darker color for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section Text */
+.hero h1 {
+    font-size: 3rem; /* Large headline */
+    color: #007bff; /* Sky blue for the headline */
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #555; /* Lighter text color */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Services Overview */
+.services-overview h2 {
+    font-size: 2rem;
+    color: #007bff; /* Sky blue for the section title */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.services-overview .service {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services-overview .service h3 {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-top: 1rem;
+}
+
+.services-overview .service p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Why Choose Us */
+.why-choose-us h2 {
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.why-choose-us ul li {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Call to Action */
+.cta h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cta .cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.cta .cta-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section */
+.map {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5faff;
+}
+
+.map iframe {
+    border: none;
+    margin-top: 1rem;
+    height: 250px; /* Reduced height */
+    width: 100%;
+}
+
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9fc;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Adjust height as per your preference */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section Styling */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.item {
+    width: 250px;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .items {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .carousel {
+        height: 40vh;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero_services.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.service img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-text {
+    padding: 2rem;
+}
+
+.service-text h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.service-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-text ul li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f4f9fc;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.why-choose-us h2 {
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature {
+    max-width: 250px;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Call-to-Action */
+.cta {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cta button:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('contact_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 4rem 2rem;
+    background-color: #f4f9fc;
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Details */
+.contact-details {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-details h2 {
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.detail h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+/* Map */
+.map iframe {
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Rating Page Styles */
+.rating-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f5faff;
+}
+
+.rating-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.rating-stars input[type="radio"] {
+    display: none;
+}
+
+.rating-stars label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating-stars input[type="radio"]:checked ~ label,
+.rating-stars label:hover,
+.rating-stars label:hover ~ label {
+    color: #ffcc00;
+}
+
+.rating-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.rating-form label {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.rating-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+    margin-top: 0.5rem;
+}
+
+.rating-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.rating-form button:hover {
+    background-color: #0056b3;
+}
+
+/* About Us Page Styles */
+.company-overview {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f5faff;
+}
+
+.company-overview h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+.company-statement {
+    padding: 2rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.company-statement h3 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.team-member {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.team-member p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.restaurant-staff, .staff, .leadership {
+    padding: 4rem 2rem;
+    background-color: #f5faff;
+}
+
+.restaurant-staff h2, .staff h2, .leadership h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 2rem;
+}

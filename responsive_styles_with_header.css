@@ -1,0 +1,124 @@
+
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9fc;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Mobile Navbar Toggle */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        background-color: #007bff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        border-top: 2px solid white;
+    }
+
+    .navbar ul li {
+        text-align: center;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
+/* General Responsive Design */
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
